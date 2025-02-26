@@ -49,7 +49,7 @@ def update_ranking():
     return pd.DataFrame(ranking).T.sort_values(by=["Punkty", "Wygrane"], ascending=False)
 
 # Strona główna
-st.title("🏆 Liga Piłkarzyków Stołowych")
+st.title("🏆 Liga Piłkarzyków AMAZON")
 
 # **Dodawanie meczu**
 st.header("⚽ Dodaj wynik meczu")
