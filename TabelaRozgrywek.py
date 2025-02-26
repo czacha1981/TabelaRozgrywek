@@ -58,11 +58,11 @@ col1, col2, col3, col4 = st.columns(4)
 with col1:
     player1 = st.selectbox("Zawodnik 1", st.session_state.players)
 with col2:
-    score1 = st.number_input("Gole Zawodnik 1", min_value=0, step=1)
+    score1 = st.number_input("Sety Zawodnik 1", min_value=0, step=1)
 with col3:
     player2 = st.selectbox("Zawodnik 2", st.session_state.players, index=1)
 with col4:
-    score2 = st.number_input("Gole Zawodnik 2", min_value=0, step=1)
+    score2 = st.number_input("Sety Zawodnik 2", min_value=0, step=1)
 
 if st.button("📌 Zapisz wynik meczu"):
     if player1 != player2:
