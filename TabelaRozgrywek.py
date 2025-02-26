@@ -58,7 +58,7 @@ col1, col2, col3, col4 = st.columns(4)
 with col1:
     player1 = st.selectbox("Zawodnik 1", st.session_state.players)
 with col2:
-    score1 = st.number_input("Sety 1", min_value=0, step=1)
+    score1 = st.number_input("Sety", min_value=0, step=1)
 with col3:
     player2 = st.selectbox("Zawodnik 2", st.session_state.players, index=1)
 with col4:
@@ -88,9 +88,9 @@ if st.session_state.matches:
     if match_to_edit is not None and not df_matches.empty:
         col1, col2, col3, col4 = st.columns(4)
         with col1:
-            new_score1 = st.number_input("Nowe gole Zawodnik 1", min_value=0, step=1, value=int(df_matches.loc[match_to_edit, "Gole 1"]))
+            new_score1 = st.number_input("Nowe sety Zawodnik 1", min_value=0, step=1, value=int(df_matches.loc[match_to_edit, "Gole 1"]))
         with col2:
-            new_score2 = st.number_input("Nowe gole Zawodnik 2", min_value=0, step=1, value=int(df_matches.loc[match_to_edit, "Gole 2"]))
+            new_score2 = st.number_input("Nowe sety Zawodnik 2", min_value=0, step=1, value=int(df_matches.loc[match_to_edit, "Gole 2"]))
         with col3:
             if st.button("✏️ Zmień wynik"):
                 st.session_state.matches[match_to_edit]["Gole 1"] = new_score1
